@@ -13,13 +13,13 @@ class Nav extends React.Component {
 
   render () {
     return (
-      <aside>
+      <nav>
         <h1>NAVIGATE</h1>
         <ul>
           <li onClick={() => {this.props.handleView('home')}}>home</li>
           <li onClick={() => {this.props.handleView('addPost')}}>add post</li>
         </ul>
-      </aside>
+      </nav>
     )
   }
 }

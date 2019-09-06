@@ -21,7 +21,7 @@ class App extends React.Component {
   this.state = {
     view: {
       page: 'home',
-      pageTitle: 'i heard that...',
+      pageTitle: 'Overture Portfilios',
     },
     formInputs: {
       name: null,
@@ -84,7 +84,7 @@ class App extends React.Component {
       <div className="large-container">
         <Header/>
         <div className="main-container">
-        <Aside handleView={this.handleView}/>
+        <Nav handleView={this.handleView}/>
         <Main
         view={this.state.view}
         handleView={this.handleView}
