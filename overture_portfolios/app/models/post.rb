@@ -15,7 +15,7 @@ class Post
   DB.prepare("create_post",
     <<-SQL
       INSERT INTO posts (name, image, link, body)
-      VALUES ('#{opts["name"]}', '#{opts["image"]}', '#{opts["link"]}', '#{opts["body"]}')
+      VALUES ($1, $2, $3, $4)
       RETURNING id, name, image, link, body;
     SQL
   )
@@ -24,15 +24,15 @@ class Post
   DB.prepare("update_post",
     <<-SQL
       UPDATE posts
-      SET name = '#{opts["name"]}', image = '#{opts["image"]}', link = '#{opts["link"]}', body = '#{opts["body"]}'
-      WHERE id = #{id}
+      SET name = $2, image = $3, link = $4, body = $5
+      WHERE id = $1
       RETURNING id, name, image, link, body;
     SQL
   )
 
-  # ===============================
+
   # ROUTES
-  # ===============================
+
   # index
   def self.all
     results = DB.exec("SELECT * FROM posts ORDER BY id ASC;")
@@ -70,7 +70,7 @@ class Post
 
   # create
   def self.create(opts)
-    results = DB.exec_prepared("create_post", [opts["name"], opts["image"], opts["body"]])
+    results = DB.exec_prepared("create_post", [opts["name"], opts["image"], opts["link"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
       "name" => results.first["name"],
@@ -88,12 +88,12 @@ class Post
 
   # update
   def self.update(id, opts)
-    results = DB.exec_prepared("update_post", [id, opts["name"], opts["image"], opts["body"]])
+    results = DB.exec_prepared("update_post", [id, opts["name"], opts["image"], opts["link"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
       "body" => results.first["body"],
-      "name" => results.first["name"],
       "link" => results.first["link"],
+      "name" => results.first["name"],
       "image" => results.first["image"]
     }
   end
