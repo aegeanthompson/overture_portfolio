@@ -78,7 +78,7 @@ componentDidMount() {
           link
           <input type="text" placeholder="add your link" id="link" value={this.state.link} onChange={this.handleChange}/>
         </label>
-        <input type="submit" value="share"/>
+        <input class="shareBtn" type="submit" value="share"/>
       </form>
     )
   }
