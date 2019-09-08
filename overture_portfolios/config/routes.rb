@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   # root route
   root 'site#index'
 
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   post 'api/posts', to: 'posts#create'
   delete 'api/posts/:id', to: 'posts#delete'
   put 'api/posts/:id', to: 'posts#update'
+  
 end
