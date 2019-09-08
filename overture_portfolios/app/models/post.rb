@@ -1,18 +1,12 @@
 class Post
-  # ===============================
-  # SET UP
-  # ===============================
-  # add attribute readers for instance accesss
-  attr_reader :id
 
-  # connect to postgres
-  # if (ENV[‘DATABASE_URL’])
-  #  uri = URI.parse(ENV[‘DATABASE_URL’])
-  #  DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
-  # else
+  if(ENV['DATABASE_URL'])
+        uri = URI.parse(ENV['DATABASE_URL'])
+        DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+    else
       # connect to postgres
      DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'overture_development'})
-  # end
+  end
 
   # ===============================
   # PREPARED STATEMENTS
