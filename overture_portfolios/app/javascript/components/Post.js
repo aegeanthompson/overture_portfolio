@@ -13,7 +13,7 @@ class Post extends React.Component {
 
   render () {
     return (
-      <di className="portfolio">
+      <div className="portfolio">
       <article className="card">
       <div className="post-header">
         <img src={this.props.postData.image} alt=""/>

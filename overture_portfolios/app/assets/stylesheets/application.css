@@ -146,9 +146,19 @@ button {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  border: 2px solid #82688c;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card > h1 {
+  text-align: left;
 }
