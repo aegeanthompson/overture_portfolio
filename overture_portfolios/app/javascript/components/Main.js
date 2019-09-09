@@ -100,21 +100,32 @@ handleDelete = (id) => {
       <main>
       <div className="mainContainer">
       <div className="info">
-        <img src="https://i.ibb.co/n7zR9TY/imageedit-2-6441640447.png" alt="profile picture"></img>
+        <img className="profileImg" src="https://i.ibb.co/n7zR9TY/imageedit-2-6441640447.png" alt="profile picture"></img>
         <div className="infoText">
           <h2>JOHN SMITH</h2>
           <h4>WEB DEVELOPER</h4>
-        </div>
+          </div>
+          <div className="social">
+            <img className="socialLinks" src="https://www.fourjay.org/myphoto/f/19/198168_linkedin-logo-png-transparent-background.png"></img>
+            <img className="socialLinks" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+          </div>
+          <div className="moreInfoBtns">
+            <button>Freelance Work</button>
+            <button>View Resume</button>
+          </div>
+
       </div>
       <div className="bio">
+      <h1>Hi, I'm John!</h1>
+      <h3>Web Design & Development</h3>
       <h3>Industrious Software Developer with a passion for coding innovative projects. I have a knack for stream-lining complex issues. My background in Marketing/Sales aids me to create solutions that are both efficient and intuitive to the client’s needs. I enjoy being a part of a team and working hard towards our collective goals.</h3>
       <h1>Personal Info</h1>
         <h3>email: johnsmith@gmail.com</h3>
+        <h3>number: 512-867-5309</h3>
+        <h3>website: johnsmith.com</h3>
         </div>
       </div>
 
-      <button>Freelance Work</button>
-      <button>View Resume</button>
        <h1>{this.props.view.pageTitle}</h1>
        { this.props.view.page === 'home'
        ? this.state.posts.map((postData) => (
