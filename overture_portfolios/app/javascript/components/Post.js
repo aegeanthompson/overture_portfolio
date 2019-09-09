@@ -13,7 +13,8 @@ class Post extends React.Component {
 
   render () {
     return (
-      <article>
+      <di className="portfolio">
+      <article className="card">
       <div className="post-header">
         <img src={this.props.postData.image} alt=""/>
         <h1>{this.props.postData.name} </h1>
@@ -23,12 +24,11 @@ class Post extends React.Component {
         {this.props.postData.body}
       </div>
       <div className="post-options">
-        <ul>
-          <li onClick={() => {this.props.handleView('editPost', this.props.postData)}}>edit portfolio</li>
-          <li onClick={() => {this.props.handleDelete(this.props.postData.id)}}>delete portfolio</li>
-        </ul>
+          <a onClick={() => {this.props.handleView('editPost', this.props.postData)}}>edit portfolio</a>
+          <a onClick={() => {this.props.handleDelete(this.props.postData.id)}}>delete portfolio</a>
       </div>
     </article>
+    </div>
     )
   }
 }

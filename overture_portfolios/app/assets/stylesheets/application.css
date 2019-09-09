@@ -142,3 +142,13 @@ button {
   width: 38%;
   text-align: center;
 }
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
