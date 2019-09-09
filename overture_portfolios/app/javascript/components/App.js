@@ -49,7 +49,7 @@ class App extends React.Component {
      // decide the pageTitle based on the view
      switch (view) {
        case 'home':
-         pageTitle = 'Your Portfilio'
+         pageTitle = 'Portfilio'
          break
        case 'addPost':
          pageTitle = "Let's add a project!"

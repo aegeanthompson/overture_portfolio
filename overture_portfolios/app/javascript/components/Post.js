@@ -13,22 +13,22 @@ class Post extends React.Component {
 
   render () {
     return (
-      <div className="portfolio">
-      <article className="card">
+
+
+      <article>
       <div className="post-header">
-        <img src={this.props.postData.image} alt=""/>
+        <img className="portfolioImg" src={this.props.postData.image} alt=""/>
         <h1>{this.props.postData.name} </h1>
-        <a href={this.props.postData.name}>Follow This Link!</a>
-      </div>
-      <div className="post-body">
-        {this.props.postData.body}
+        <a className="viewLink" href={this.props.postData.name}>view project</a>
+        <h4>{this.props.postData.body}</h4>
       </div>
       <div className="post-options">
-          <a onClick={() => {this.props.handleView('editPost', this.props.postData)}}>edit portfolio</a>
-          <a onClick={() => {this.props.handleDelete(this.props.postData.id)}}>delete portfolio</a>
+          <button onClick={() => {this.props.handleView('editPost', this.props.postData)}}>edit </button>
+          <button onClick={() => {this.props.handleDelete(this.props.postData.id)}}> delete</button>
       </div>
     </article>
-    </div>
+
+
     )
   }
 }

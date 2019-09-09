@@ -103,11 +103,11 @@ handleDelete = (id) => {
         <img className="profileImg" src="https://i.ibb.co/n7zR9TY/imageedit-2-6441640447.png" alt="profile picture"></img>
         <div className="infoText">
           <h2>JOHN SMITH</h2>
-          <h4>WEB DEVELOPER</h4>
+          <h5>WEB DEVELOPER</h5>
           </div>
           <div className="social">
-            <img className="socialLinks" src="https://www.fourjay.org/myphoto/f/19/198168_linkedin-logo-png-transparent-background.png"></img>
-            <img className="socialLinks" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+            <a href="https://linkedin.com/in/masonagriffin/"><img className="socialLinks" src="https://www.fourjay.org/myphoto/f/19/198168_linkedin-logo-png-transparent-background.png"></img></a>
+            <a href="https://github.com/aegeanthompson"><img className="socialLinks" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img></a>
           </div>
           <div className="moreInfoBtns">
             <button>Freelance Work</button>
@@ -126,15 +126,17 @@ handleDelete = (id) => {
         </div>
       </div>
 
-       <h1>{this.props.view.pageTitle}</h1>
+       <h1 className="portfolioHeader">{this.props.view.pageTitle}</h1>
        { this.props.view.page === 'home'
        ? this.state.posts.map((postData) => (
+        <div className="portfolio">
          <Post
          key={postData.id}
          postData={postData}
          handleView={this.props.handleView}
          handleDelete={this.handleDelete}
          />
+        </div>
       ))
       : <Form
       handleCreate={this.handleCreate}
