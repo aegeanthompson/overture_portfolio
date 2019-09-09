@@ -71,7 +71,7 @@ componentDidMount() {
           <input type="text" placeholder="your image" id="image" value={this.state.image} onChange={this.handleChange}/>
         </label>
         <label id="post-form">
-          post
+          description
           <textarea placeholder="write your words" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
         </label>
         <label>

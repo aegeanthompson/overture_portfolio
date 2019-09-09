@@ -14,11 +14,8 @@ class Nav extends React.Component {
   render () {
     return (
       <nav>
-        <h1>NAVIGATE</h1>
-        <ul>
-          <li onClick={() => {this.props.handleView('home')}}>home</li>
-          <li onClick={() => {this.props.handleView('addPost')}}>add post</li>
-        </ul>
+          <a className="nav" onClick={() => {this.props.handleView('home')}}>home</a>
+          <a className="nav" onClick={() => {this.props.handleView('addPost')}}>add project</a>
       </nav>
     )
   }

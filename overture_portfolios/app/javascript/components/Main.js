@@ -98,6 +98,23 @@ handleDelete = (id) => {
   render () {
     return (
       <main>
+      <div className="mainContainer">
+      <div className="info">
+        <img src="https://i.ibb.co/n7zR9TY/imageedit-2-6441640447.png" alt="profile picture"></img>
+        <div className="infoText">
+          <h2>JOHN SMITH</h2>
+          <h4>WEB DEVELOPER</h4>
+        </div>
+      </div>
+      <div className="bio">
+      <h3>Industrious Software Developer with a passion for coding innovative projects. I have a knack for stream-lining complex issues. My background in Marketing/Sales aids me to create solutions that are both efficient and intuitive to the client’s needs. I enjoy being a part of a team and working hard towards our collective goals.</h3>
+      <h1>Personal Info</h1>
+        <h3>email: johnsmith@gmail.com</h3>
+        </div>
+      </div>
+
+      <button>Freelance Work</button>
+      <button>View Resume</button>
        <h1>{this.props.view.pageTitle}</h1>
        { this.props.view.page === 'home'
        ? this.state.posts.map((postData) => (
@@ -116,6 +133,7 @@ handleDelete = (id) => {
       />
     }
     </main>
+
     )
   }
 }

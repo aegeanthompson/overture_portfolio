@@ -2,23 +2,122 @@
 /*  IMPORTED FONTS   */
 /* ================= */
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Metrophobic&display=swap');
 
 h1 {
   text-align: center;
-  color: green;
-  font-family: 'Righteous', cursive;
+  color:  #82688c;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bolder;
+}
+
+header {
+  padding-top: 1em;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Metrophobic', sans-serif;
+
 }
 
 .shareBtn {
   width: 10%;
+  background-color: #82688c;
+  color: ghostwhite;
+  padding: 0.3em 0;
 }
 
 input, textarea {
   margin: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5em;
+  font-size: 1.2em;
+}
+
+.nav {
+  padding: 0 0.5em;
+  background-color: #82688c;
+  color: ghostwhite;
+  font-family: 'Righteous', cursive;
+  border: 3px solid #d7d4d9;
+  margin: 0.5em;
+}
+
+
+.mainContainer {
+  display: flex;
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  color: grey;
+  font-size: 1em;
+  text-align: left;
+  font-family: 'Righteous', cursive;
+  width: 30%;
+  height: 100%;
+}
+
+.infoText {
+  padding-left: 4em;
+  font-size: 1em;
+}
+
+img {
+  width: 40%;
+  padding-left: 2em;
+}
+
+.bio {
+  width: 55%;
+  height: 20%;
+  padding: 2em;
+  font-family: 'Metrophobic', sans-serif;
+  border: 2px solid #82688c;
+  background-color: #fffbde;
+  text-align: center;
+}
+
+.personalInfo {
+  width: 55%;
+  height: 20%;
+  border: 2px solid #82688c;
+  background-color: #fffbde;
+  margin: 7em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.socialLinks {
+  width: 3%;
+  height: 3%;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Metrophobic', sans-serif;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  background-color: #82688c;
+  color: ghostwhite;
+  padding: 0.5em;
+  font-family: 'Righteous', cursive;
+  font-size: 0.9em;
+  text-transform: lowercase;
 }
